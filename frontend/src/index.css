@@ -1,0 +1,51 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --bg:      #0a0e1a;
+  --bg2:     #0f1525;
+  --bg3:     #151d33;
+  --panel:   #111827;
+  --border:  rgba(56,189,248,0.15);
+  --border2: rgba(56,189,248,0.30);
+  --accent:  #38bdf8;
+  --accent2: #818cf8;
+  --accent3: #34d399;
+  --danger:  #f87171;
+  --warning: #fbbf24;
+  --text:    #e2e8f0;
+  --muted:   #64748b;
+  --muted2:  #94a3b8;
+  --mono: 'JetBrains Mono', monospace;
+  --head: 'Syne', sans-serif;
+  --radius: 8px;
+}
+
+html, body, #root {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+button { cursor: pointer; font-family: var(--mono); }
+input, select { font-family: var(--mono); }
+
+::selection { background: rgba(56,189,248,0.25); }
+
+.scanline {
+  position: fixed; inset: 0; pointer-events: none; z-index: 999;
+  background: repeating-linear-gradient(
+    0deg, transparent, transparent 2px,
+    rgba(0,0,0,0.025) 2px, rgba(0,0,0,0.025) 4px
+  );
+}

@@ -1,0 +1,38 @@
+From: security-alert@hdfc-bank-secure.net
+To: customer@gmail.com
+Subject: URGENT: Your HDFC Bank Account Has Been Suspended - Verify Now
+Date: Mon, 28 Apr 2026 03:17:42 +0000
+Message-ID: <fake-message-id-92847362@hdfc-bank-secure.net>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Reply-To: hdfc.support.recovery@protonmail.com
+Received: from mail.shady-server-92.ru (unknown [45.142.212.100])
+  by mx.google.com with ESMTP id sus123
+  for <customer@gmail.com>
+X-Mailer: PhishKit Pro v3.2
+Authentication-Results: mx.google.com;
+  dkim=fail (signature verification failed);
+  spf=fail (google.com: domain of security-alert@hdfc-bank-secure.net does not designate 45.142.212.100 as permitted sender);
+  dmarc=fail (p=NONE) header.from=hdfc-bank-secure.net
+
+Dear Valued Customer,
+
+We have detected SUSPICIOUS ACTIVITY on your HDFC Bank account. Your account has been TEMPORARILY SUSPENDED for your protection.
+
+To restore access to your account IMMEDIATELY, you must verify your identity within 24 HOURS or your account will be PERMANENTLY CLOSED.
+
+CLICK HERE TO VERIFY YOUR ACCOUNT NOW:
+http://hdfc-secure-verification.xyz/login?token=8f3k2j9x&redirect=steal_credentials
+
+You will need to provide:
+- Full name and date of birth
+- Account number and IFSC code
+- ATM PIN and CVV number
+- OTP from your registered mobile
+
+WARNING: Failure to verify within 24 hours will result in permanent account suspension and legal action.
+
+HDFC Bank Security Team
+Toll Free: 1800-XXX-XXXX (fake number)
+
+NOTE: This email was sent from an unmonitored address. Do not reply.

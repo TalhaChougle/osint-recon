@@ -1,0 +1,33 @@
+From: no-reply@accounts.google.com
+To: talha.chougle@gmail.com
+Subject: Security alert — New sign-in to your Google Account
+Date: Tue, 29 Apr 2026 08:22:11 +0000
+Message-ID: <20260429082211.google-security-123456@accounts.google.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Received: from accounts.google.com (accounts.google.com [216.58.200.1])
+  by mx.google.com with ESMTPS id xyz789
+  for <talha.chougle@gmail.com>
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=accounts.google.com;
+  s=20230601; t=1714383731;
+  bh=legitimatehashvalue==; h=From:To:Subject:Date;
+  b=validGoogleDKIMsig==
+Authentication-Results: mx.google.com;
+  dkim=pass header.i=@accounts.google.com;
+  spf=pass (google.com: domain of no-reply@accounts.google.com);
+  dmarc=pass (p=REJECT) header.from=accounts.google.com
+
+Hi Talha,
+
+Your Google Account was just signed in to from a new device.
+
+Device:   Windows PC — Chrome 124
+Location: Mumbai, Maharashtra, India
+Time:     Tuesday, April 29, 2026 at 1:52 PM IST
+
+If this was you, you don't need to do anything.
+
+If you didn't sign in recently, your account may be compromised.
+Check activity: https://myaccount.google.com/security-checkup
+
+Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043

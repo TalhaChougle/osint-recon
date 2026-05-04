@@ -1,0 +1,45 @@
+INVOICE DOCUMENT — SUSPICIOUS ATTACHMENT SAMPLE
+================================================
+This is a sample text file simulating a suspicious invoice PDF attachment.
+
+Invoice Number: INV-2026-99182
+Date: April 28, 2026
+Due Date: IMMEDIATE PAYMENT REQUIRED
+
+Bill To:
+Talha Chougle
+Mumbai, Maharashtra
+
+From:
+TechServices Global LLC
+Registration: FAKE-REG-NUMBER
+Address: 123 Nowhere Street, Unknown City
+
+ITEMS:
+1. Software License Renewal (unspecified)     $1,299.00
+2. Security Audit Service (unspecified)       $2,500.00
+3. Maintenance Fee (unspecified)              $499.00
+                                    TOTAL:   $4,298.00
+
+PAYMENT INSTRUCTIONS:
+Wire transfer ONLY to:
+Bank: Crypto-First Bank (offshore)
+Account: 9872634819
+Routing: FAKE-ROUTING
+SWIFT: FAKSWIFT
+
+OR pay via Bitcoin: 1A2B3C4D5E6F7G8H9I0J (unverified wallet)
+
+WARNING: Non-payment within 24 hours will result in:
+- Legal action
+- Credit score damage
+- Collection agency referral
+
+Click to pay now: http://fake-payment-portal.xyz/pay?invoice=INV-2026-99182
+
+Contact: payments@techservices-global.net
+Phone: +1-800-FAKE-NUM
+
+IMPORTANT: If you did not request this service, you must still pay
+as per our auto-enrollment terms and conditions.
+Section 4.2(b) of our service agreement (which you never signed).

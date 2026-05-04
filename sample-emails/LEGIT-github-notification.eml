@@ -1,0 +1,39 @@
+From: notifications@github.com
+To: talha.chougle@gmail.com
+Subject: [TalhaChougle/osint-recon] Pull request opened by contributor
+Date: Mon, 28 Apr 2026 10:14:32 +0000
+Message-ID: <162765432198.github.com>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Received: from mail.github.com (mail.github.com [192.30.252.1])
+  by mx.google.com with ESMTPS id abc123
+  for <talha.chougle@gmail.com>
+  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=github.com;
+  s=pf2023; t=1714299272;
+  bh=abc123xyz456==; h=From:To:Subject:Date;
+  b=validDKIMsignaturehere==
+Authentication-Results: mx.google.com;
+  dkim=pass header.i=@github.com header.s=pf2023;
+  spf=pass (google.com: domain of notifications@github.com designates 192.30.252.1 as permitted sender);
+  dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=github.com
+
+Hi TalhaChougle,
+
+A new pull request has been opened on your repository osint-recon.
+
+Pull Request #12 — "Add dark mode toggle and improve mobile responsiveness"
+Opened by: dev-contributor-42
+Branch: feature/dark-mode → main
+
+Changes: +287 lines, -43 lines across 6 files
+
+View the pull request:
+https://github.com/TalhaChougle/osint-recon/pull/12
+
+You can reply to this email to leave a comment on the pull request.
+
+---
+You are receiving this because you are subscribed to this repository.
+Unsubscribe: https://github.com/notifications/unsubscribe/TalhaChougle/osint-recon
+GitHub, Inc. 88 Colin P Kelly Jr St, San Francisco, CA 94107

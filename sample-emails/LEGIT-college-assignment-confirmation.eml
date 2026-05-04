@@ -1,0 +1,32 @@
+From: academics@rcasc.edu.in
+To: talha.chougle@gmail.com
+Subject: Assignment Submission Confirmed — Cybersecurity Fundamentals (CS401)
+Date: Wed, 30 Apr 2026 09:45:00 +0530
+Message-ID: <rcasc-academics-20260430094500@rcasc.edu.in>
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Received: from mail.rcasc.edu.in (mail.rcasc.edu.in [103.21.58.10])
+  by mx.google.com with ESMTP id college123
+DKIM-Signature: v=1; a=rsa-sha256; d=rcasc.edu.in; s=mail2024;
+  b=collegedkimsig==
+Authentication-Results: mx.google.com;
+  dkim=pass header.i=@rcasc.edu.in;
+  spf=pass;
+  dmarc=pass
+
+Dear Talha Chougle,
+
+This is a confirmation that your assignment has been successfully submitted.
+
+Course:      CS401 — Cybersecurity Fundamentals
+Assignment:  Unit 3 — Network Penetration Testing Report
+Submitted:   30 April 2026, 09:44 AM IST
+File:        talha_chougle_unit3_pentest.pdf (2.3 MB)
+Status:      RECEIVED ✓
+
+Your submission will be reviewed by Prof. Sharma within 7 working days.
+Results will be posted on the student portal: https://portal.rcasc.edu.in
+
+Royal College of Arts, Science and Commerce
+Mira Road, Mumbai — 401107
+academics@rcasc.edu.in
