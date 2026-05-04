@@ -1,4 +1,5 @@
 import React, { useState, useRef } from 'react'
+import { SAMPLE_FILES } from '../utils/sampleFiles.js'
 import { Card, CardTitle, ResultBlock, Row, Btn, Terminal, Spinner, Badge, MeterBar } from './UI.jsx'
 
 // ── File type helper ─────────────────────────────────────────
@@ -41,6 +42,20 @@ export default function EmailPanel({ loading, result, logs, error, onEmailScan, 
     e.preventDefault(); setDragOver(false)
     addToQueue(Array.from(e.dataTransfer.files))
   }
+  function base64ToFile(b64, filename, mime) {
+    const byteChars = atob(b64)
+    const byteArr = new Uint8Array(byteChars.length)
+    for (let i = 0; i < byteChars.length; i++) byteArr[i] = byteChars.charCodeAt(i)
+    return new File([byteArr], filename, { type: mime })
+  }
+
+  function loadSampleFile(sample) {
+    const mimeMap = { pdf:'application/pdf', eml:'message/rfc822', txt:'text/plain' }
+    const mime = mimeMap[sample.type] || 'application/octet-stream'
+    const file = base64ToFile(sample.data, sample.name, mime)
+    addToQueue([file])
+  }
+
   function addToQueue(files) {
     const filtered = files.filter(f => {
       if (f.size > 10 * 1024 * 1024) { alert(`${f.name} exceeds 10 MB — skipped`); return false }
@@ -253,6 +268,38 @@ export default function EmailPanel({ loading, result, logs, error, onEmailScan, 
             <input ref={fileInputRef} type="file" multiple accept="*/*" style={{ display:'none' }}
               onChange={e => addToQueue(Array.from(e.target.files))} />
           </div>
+
+          {/* Sample Files */}
+          {queuedFiles.length === 0 && !forensicData && !loading && (
+            <Card style={{ marginBottom:14 }}>
+              <CardTitle>Sample Files — Click Any to Load & Test Instantly</CardTitle>
+              <div style={{ display:'grid', gridTemplateColumns:'1fr 1fr 1fr', gap:8 }}>
+                {SAMPLE_FILES.map((s,i) => {
+                  const vColor = s.verdict==='LEGIT' ? 'var(--accent3)' : s.verdict==='PHISHING' ? 'var(--danger)' : s.verdict==='SCAM' ? 'var(--danger)' : 'var(--warning)'
+                  const vBg = s.verdict==='LEGIT' ? 'rgba(52,211,153,0.15)' : s.verdict==='PHISHING' ? 'rgba(248,113,113,0.15)' : s.verdict==='SCAM' ? 'rgba(248,113,113,0.15)' : 'rgba(251,191,36,0.15)'
+                  const vBorder = s.verdict==='LEGIT' ? 'rgba(52,211,153,0.3)' : s.verdict==='PHISHING' ? 'rgba(248,113,113,0.3)' : s.verdict==='SCAM' ? 'rgba(248,113,113,0.3)' : 'rgba(251,191,36,0.3)'
+                  return (
+                    <div key={i}
+                      onClick={() => loadSampleFile(s)}
+                      onMouseEnter={e => { e.currentTarget.style.borderColor = vColor; e.currentTarget.style.background = 'rgba(56,189,248,0.04)' }}
+                      onMouseLeave={e => { e.currentTarget.style.borderColor = 'var(--border)'; e.currentTarget.style.background = 'var(--bg3)' }}
+                      style={{ background:'var(--bg3)', border:'1px solid var(--border)', borderRadius:8, padding:'12px 14px', cursor:'pointer', transition:'all .15s' }}
+                    >
+                      <div style={{ display:'flex', alignItems:'center', justifyContent:'space-between', marginBottom:6 }}>
+                        <span style={{ fontSize:18 }}>{s.icon}</span>
+                        <span style={{ fontSize:9, padding:'2px 7px', borderRadius:4, background:vBg, color:vColor, border:`1px solid ${vBorder}`, letterSpacing:1, fontWeight:600 }}>{s.verdict}</span>
+                      </div>
+                      <div style={{ color:'var(--text)', fontSize:12, fontWeight:500, marginBottom:3 }}>{s.label}</div>
+                      <div style={{ color:'var(--muted)', fontSize:10, fontFamily:'var(--mono)' }}>{s.name.length > 35 ? s.name.slice(0,32)+'...' : s.name}</div>
+                    </div>
+                  )
+                })}
+              </div>
+              <div style={{ marginTop:10, fontSize:11, color:'var(--muted)', textAlign:'center' }}>
+                Click any sample → it loads into the queue above → hit <b style={{color:'var(--accent)'}}>▶ ANALYZE</b> to scan it
+              </div>
+            </Card>
+          )}
 
           {/* File queue */}
           {queuedFiles.length > 0 && (
