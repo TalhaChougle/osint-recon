@@ -18,7 +18,7 @@ if (!process.env.GEMINI_API_KEY) {
 
 const app   = express();
 const PORT  = process.env.PORT || 3001;
-const MODEL = 'gemini-3.1-flash-lite-preview';
+const MODEL = 'gemini-2.0-flash';
 
 // ── Gemini client ─────────────────────────────────────────────
 const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
